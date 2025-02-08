@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacant Positions</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb, #c8e6c9);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #2c3e50, #4e5d6c, #607d8b, #455a64);
+            background-size: 400% 400%;
+            animation: gradientText 15s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #2c3e50, #4e5d6c, #607d8b, #455a64);
+            background-size: 400% 400%;
+            animation: gradientText 15s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #37474f;
+        }
+
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            color: #333;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #0288d1;
+            outline: none;
+            box-shadow: 0 0 8px rgba(2, 136, 209, 0.3);
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #0288d1;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(2, 136, 209, 0.3);
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #01579b;
+            box-shadow: 0 4px 12px rgba(1, 87, 155, 0.4);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 6px rgba(1, 87, 155, 0.4);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .footer-img {
+            margin-top: 20px;
+            width: 150px;
+        }
+
+        /* Animations */
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes gradientText {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910794.png" alt="Resume Icon" class="header-img">
+        <h1>Resume Matcher</h1>
+        <p>Quickly match resumes to your vacant positions with ease!</p>
+        <form action="/vacant_positions" method="POST">
+            <label for="num_positions">Enter the number of vacant positions:</label>
+            <input type="number" id="num_positions" name="num_positions" min="1" required>
+            <button type="submit">Next</button>
+        </form>
+        <img src="https://cdn-icons-png.flaticon.com/512/1042/1042333.png" alt="Vacant Positions Icon" class="footer-img">
+    </div>
+</body>
+</html>

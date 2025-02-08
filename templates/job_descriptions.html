@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Descriptions</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb, #c8e6c9);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 700px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 80vh; /* Limit the height of the container */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0288d1;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #37474f;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #37474f;
+            text-align: left;
+        }
+
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            resize: vertical;
+            margin-bottom: 20px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #0288d1;
+            outline: none;
+            box-shadow: 0 0 8px rgba(2, 136, 209, 0.3);
+        }
+
+        input[type="file"] {
+            margin-top: 15px;
+            font-size: 1rem;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            width: calc(100% - 22px);
+        }
+
+        input[type="file"]:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #0288d1;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(2, 136, 209, 0.3);
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #01579b;
+            box-shadow: 0 4px 12px rgba(1, 87, 155, 0.4);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 6px rgba(1, 87, 155, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Job Descriptions 🎉</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="num_positions" value="{{ num_positions }}">  <!-- Hidden num_positions field -->
+            
+            {% for i in range(num_positions) %}
+                <label for="job_desc_{{ i }}">Job Description {{ i + 1 }}:</label>
+                <textarea id="job_desc_{{ i }}" name="job_desc_{{ i }}" rows="5" required></textarea>
+            {% endfor %}
+
+            <h3>Upload Resumes 📄</h3>
+            <input type="file" name="resumes" multiple accept=".pdf">
+            <button type="submit">Match Resumes 🔍</button>
+        </form>
+    </div>
+</body>
+</html>

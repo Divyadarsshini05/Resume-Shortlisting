@@ -1,0 +1,66 @@
+Sentence1,Sentence2,SimilarityScore
+How are you?,How are you doing?,0.9
+What is your name?,Can you tell me your name?,0.85
+I love programming.,Programming is amazing!,0.8
+I am feeling great today.,The weather is nice today.,0.5
+He is reading a book.,She is reading a book.,0.9
+The car is fast.,The car is slow.,0.1
+I enjoy coding.,I like coding.,0.95
+I am tired.,I am not tired.,0.1
+Cats are cute.,I have a dog.,0.2
+I like pizza.,Pizza is delicious.,0.85
+The sky is blue.,The grass is green.,0.4
+He is running fast.,He is walking slowly.,0.2
+She loves music.,She enjoys singing.,0.7
+I am hungry.,I want food.,0.85
+The sun is shining.,It is a sunny day.,0.9
+Sentence 15,Sentence 89,0.57
+Sentence 58,Sentence 69,0.66
+Sentence 92,Sentence 3,0.62
+Sentence 100,Sentence 83,0.44
+Sentence 41,Sentence 55,0.17
+Sentence 22,Sentence 39,0.28
+Sentence 98,Sentence 15,0.3
+Sentence 26,Sentence 38,0.25
+Sentence 96,Sentence 29,0.16
+Sentence 35,Sentence 68,0.01
+Sentence 98,Sentence 55,0.52
+Sentence 4,Sentence 71,0.47
+Sentence 53,Sentence 83,0.6
+Sentence 67,Sentence 24,0.26
+Sentence 42,Sentence 66,0.26
+Sentence 93,Sentence 37,0.03
+Sentence 58,Sentence 86,0.34
+Sentence 96,Sentence 3,0.46
+Sentence 21,Sentence 80,0.29
+Sentence 93,Sentence 30,0.63
+Sentence 60,Sentence 23,0.35
+Sentence 89,Sentence 27,0.61
+Sentence 91,Sentence 32,0.58
+Sentence 71,Sentence 47,0.8
+Sentence 72,Sentence 56,0.72
+Sentence 71,Sentence 15,0.23
+Sentence 99,Sentence 64,0.59
+Sentence 49,Sentence 1,0.62
+Sentence 58,Sentence 5,0.73
+Sentence 34,Sentence 46,0.38
+Sentence 82,Sentence 19,0.3
+Sentence 93,Sentence 95,0.77
+Sentence 39,Sentence 74,0.91
+Sentence 66,Sentence 47,0.96
+Sentence 85,Sentence 78,0.51
+Sentence 80,Sentence 67,0.09
+Sentence 5,Sentence 63,0.21
+Sentence 52,Sentence 97,0.52
+Sentence 60,Sentence 14,0.36
+Sentence 84,Sentence 37,0.53
+Sentence 42,Sentence 84,0.67
+Sentence 93,Sentence 42,0.65
+Sentence 24,Sentence 10,0.69
+Sentence 81,Sentence 48,0.64
+Sentence 91,Sentence 30,0.42
+Sentence 70,Sentence 70,0.54
+Sentence 57,Sentence 82,0.77
+Sentence 24,Sentence 43,0.97
+Sentence 33,Sentence 11,0.14
+Sentence 42,Sentence 53,0.01
