@@ -12,13 +12,13 @@ An AI-powered web application to assist HR professionals in shortlisting resumes
 ## 💻 Screenshots
 
 ### Homepage
-![Homepage](Screenshots/HomePage)
+![Homepage](Screenshot/HomePage)
 
 ### Job Description Page
-![Job Description Page](Screenshots/Resume-Uploading.png)
+![Job Description Page](Screenshot/Resume-Uploading.png)
 
 ### Output Page
-![Output Page](Screenshots/Results.png)
+![Output Page](Screenshot/Results.png)
 
 ## ⚙️ Technologies Used
 
